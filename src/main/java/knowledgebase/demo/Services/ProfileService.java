@@ -104,12 +104,12 @@ public class ProfileService implements UserDetailsService {
 
     public void addSuperAdmin(){
         Profile profile =new Profile();
-        profile.setAccountType(String.valueOf(AccountType.SUPERADMIN));
-        profile.setFirstName("Daniel");
-        profile.setLastName("Tadeese");
-        profile.setEmail("danitadesse@gmail.com");
+        profile.setAccountType(String.valueOf(AccountType.ADMIN));
+        profile.setFirstName("Girum");
+        profile.setLastName("Kedese");
+        profile.setEmail("girumkedese@gmail.com");
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        profile.setPassword(encoder.encode("Dani"));
+        profile.setPassword(encoder.encode("girum"));
 
         repository.save(profile);
     }
