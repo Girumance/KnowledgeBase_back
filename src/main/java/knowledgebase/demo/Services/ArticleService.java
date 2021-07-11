@@ -3,6 +3,7 @@ package knowledgebase.demo.Services;
 
 
 
+import knowledgebase.demo.Constants.Status;
 import knowledgebase.demo.Domain.Article;
 import knowledgebase.demo.Repositories.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -77,5 +78,7 @@ public class ArticleService {
     public long totalProperties(){
       return  articleRepository.count();
     }
+
+    public ArrayList<Article> getPublished(){return  articleRepository.findAllByStatus(Status.PUBLISHED);}
 
 }

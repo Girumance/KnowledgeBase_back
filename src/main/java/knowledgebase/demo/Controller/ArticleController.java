@@ -22,24 +22,22 @@ public class ArticleController {
 
     }
 
+
     @PostMapping("/remove")
     public boolean removeProperty(@RequestBody String id){
 
         return  articleService.removeProperty(id);
 
-
     }
+
 
     @GetMapping("/owner/{id}")
     public ArrayList<Article> getPropertyByOwnerId(@PathVariable("id") String id){
 
 
-
         return  articleService.getPropertyByOwnerId(id);
 
     }
-
-
 
 
 
@@ -66,6 +64,12 @@ public class ArticleController {
     public boolean updateProperty(@RequestBody Article property, @PathVariable String id){
 
         return articleService.updateProperty(property,id);
+    }
+
+
+    @GetMapping("published")
+    public ArrayList<Article> getALlPublished() {
+        return  articleService.getPublished();
     }
 
 }
