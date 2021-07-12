@@ -66,4 +66,16 @@ public class ProfileController {
 
         return  service.deleteUser(id);
     }
+
+    @GetMapping("/enable/{id}")
+    public Profile EnableUser(@PathVariable String id){
+
+        return  service.DisableEnable(id,true);
+    }
+
+    @GetMapping("/disable/{id}")
+    public Profile disableUser(@PathVariable String id){
+
+        return  service.DisableEnable(id,false);
+    }
 }

@@ -23,7 +23,6 @@ public class Profile {
     private String email;
     private AccountType type;
     private String password;
-
     private boolean isAccountNonBlocked=true;
     private boolean isAccountEnabled=true;
 

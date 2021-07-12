@@ -72,4 +72,7 @@ public class ArticleController {
         return  articleService.getPublished();
     }
 
+    @GetMapping("/All")
+    public ArrayList<Article> getAll(){return  articleService.getAll();}
+
 }

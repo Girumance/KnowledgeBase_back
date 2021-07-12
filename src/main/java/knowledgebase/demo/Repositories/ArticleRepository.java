@@ -15,7 +15,7 @@ public interface ArticleRepository extends MongoRepository<Article,String> {
     @Query(value="{OwnerId:?0}")
     ArrayList<Article> findAllByOwnerId(String id);
     ArrayList<Article> findAllByStatus(Status status);
-
+    ArrayList<Article> findAll();
     Article findArticleById(String Id);
 
 

@@ -125,7 +125,23 @@ public class ProfileService implements UserDetailsService {
         return true;
     }
 
-   
+    public Profile DisableEnable(String id,boolean value){
+
+        Optional<Profile> old=repository.findById(id);
+
+        if(old.isPresent()){
+            repository.delete(old.get());
+            old.get().setAccountEnabled(value);
+
+            repository.save(old.get());
+            return old.get();
+        }
+        return  old.get();
+
+    }
+
+
+
 
 
 

@@ -80,5 +80,6 @@ public class ArticleService {
     }
 
     public ArrayList<Article> getPublished(){return  articleRepository.findAllByStatus(Status.PUBLISHED);}
+    public ArrayList<Article> getAll(){return  articleRepository.findAll();}
 
 }
