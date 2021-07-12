@@ -67,7 +67,7 @@ public class ArticleController {
     }
 
 
-    @GetMapping("published")
+    @GetMapping("/published")
     public ArrayList<Article> getALlPublished() {
         return  articleService.getPublished();
     }
